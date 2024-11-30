@@ -13,19 +13,24 @@ import {
   sepolia,
   zora,
   zoraSepolia,
+  mode,
+  modeTestnet,
 } from 'viem/chains'
 
 export const baseChainPair = defineMainnetChainPair(base)
 export const fraxtalChainPair = defineMainnetChainPair(fraxtal)
 export const optimismChainPair = defineMainnetChainPair(optimism)
 export const zoraChainPair = defineMainnetChainPair(zora)
+export const modeChainPair = defineMainnetChainPair(mode)
 
 export const baseSepoliaChainPair = defineSepoliaChainPair(baseSepolia)
 export const fraxtalSepoliaChainPair = defineSepoliaChainPair(fraxtalSepolia)
 export const optimismSepoliaChainPair = defineSepoliaChainPair(optimismSepolia)
 export const zoraSepoliaChainPair = defineSepoliaChainPair(zoraSepolia)
+export const modeTestnetChainPair = defineSepoliaChainPair(modeTestnet)
 
 export const supportedMainnetChainPairs = [
+  modeChainPair,
   baseChainPair,
   fraxtalChainPair,
   optimismChainPair,
@@ -33,6 +38,7 @@ export const supportedMainnetChainPairs = [
 ] as const
 
 export const supportedSepoliaChainPairs = [
+  modeTestnetChainPair,
   baseSepoliaChainPair,
   fraxtalSepoliaChainPair,
   optimismSepoliaChainPair,
